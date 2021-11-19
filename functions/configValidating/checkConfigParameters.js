@@ -9,4 +9,4 @@ const checkConfigParameters=(element)=> {
     if (element !== "C1" && element !== "C0" && element !== "A" && element !== "R1" && element !== "R0") { throw new ArgumentsErrors("unexpected parameter in config----" + element) }
 }
 
-module.export=checkConfigParameters
+module.exports=checkConfigParameters

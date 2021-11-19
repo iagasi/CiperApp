@@ -1,11 +1,13 @@
 const PushFunctionsToArray=require("../functions/configValidating/PushFunctionsToArray")
-const ceasar=require("../Cipers/ceasar").handler
-const rot8=require("../Cipers/rot8")
-const abbash=require("../Cipers/rot8")
+
+const LetterChecker =require("../Cipers/ceasarEncryptionLogic")
+
 afterEach(() => {
     jest.clearAllMocks();
   });
-
+const ceasar=jest.fn(()=>{})
+const rot8=jest.fn(()=>{})
+const abbash=jest.fn(()=>{})
 test("does something",()=>{
     const somedata="C1-A-C0-R1-R0"
     const dummufunction=jest.fn()

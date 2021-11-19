@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637299238587" clover="3.2.0">
-  <project timestamp="1637299238587" name="All files">
-    <metrics statements="72" coveredstatements="63" conditionals="47" coveredconditionals="33" methods="12" coveredmethods="10" elements="131" coveredelements="106" complexity="0" loc="72" ncloc="72" packages="3" files="6" classes="6"/>
-    <package name="Cipers">
-      <metrics statements="50" coveredstatements="41" conditionals="29" coveredconditionals="17" methods="9" coveredmethods="7"/>
-      <file name="ceasar.js" path="C:\Users\Computer\Desktop\New folder (3)\Cipers\ceasar.js">
-        <metrics statements="11" coveredstatements="5" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="1"/>
+<coverage generated="1637349751980" clover="3.2.0">
+  <project timestamp="1637349751980" name="All files">
+    <metrics statements="77" coveredstatements="77" conditionals="67" coveredconditionals="61" methods="12" coveredmethods="12" elements="156" coveredelements="150" complexity="0" loc="77" ncloc="77" packages="4" files="7" classes="7"/>
+    <package name="New folder (3)">
+      <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
+      <file name="MyCliLibrary.js" path="C:\Users\Computer\Desktop\New folder (3)\MyCliLibrary.js">
+        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="13" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
+    </package>
+    <package name="New folder (3).Cipers">
+      <metrics statements="30" coveredstatements="30" conditionals="16" coveredconditionals="16" methods="5" coveredmethods="5"/>
       <file name="ceasarEncryptionLogic.js" path="C:\Users\Computer\Desktop\New folder (3)\Cipers\ceasarEncryptionLogic.js">
         <metrics statements="30" coveredstatements="30" conditionals="16" coveredconditionals="16" methods="5" coveredmethods="5"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="12" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -51,46 +57,51 @@
         <line num="97" count="1" type="stmt"/>
         <line num="104" count="2" type="stmt"/>
       </file>
-      <file name="rot8.js" path="C:\Users\Computer\Desktop\New folder (3)\Cipers\rot8.js">
-        <metrics statements="9" coveredstatements="6" conditionals="5" coveredconditionals="1" methods="2" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-      </file>
     </package>
-    <package name="Errors">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+    <package name="New folder (3).Errors">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="ArumentsError.js" path="C:\Users\Computer\Desktop\New folder (3)\Errors\ArumentsError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="MyCliError.js" path="C:\Users\Computer\Desktop\New folder (3)\Errors\MyCliError.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="functions.configValidating">
-      <metrics statements="18" coveredstatements="18" conditionals="18" coveredconditionals="16" methods="2" coveredmethods="2"/>
+    <package name="New folder (3).functions.configValidating">
+      <metrics statements="25" coveredstatements="25" conditionals="39" coveredconditionals="34" methods="3" coveredmethods="3"/>
       <file name="PushFunctionsToArray.js" path="C:\Users\Computer\Desktop\New folder (3)\functions\configValidating\PushFunctionsToArray.js">
-        <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <metrics statements="13" coveredstatements="13" conditionals="12" coveredconditionals="9" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
         <line num="11" count="4" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
-        <line num="16" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="3" type="cond" truecount="4" falsecount="0"/>
         <line num="18" count="3" type="cond" truecount="3" falsecount="1"/>
-        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="3" type="cond" truecount="1" falsecount="1"/>
         <line num="24" count="3" type="stmt"/>
-        <line num="27" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="37" count="1" type="stmt"/>
+      </file>
+      <file name="checkConfigParameters.js" path="C:\Users\Computer\Desktop\New folder (3)\functions\configValidating\checkConfigParameters.js">
+        <metrics statements="7" coveredstatements="7" conditionals="21" coveredconditionals="19" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="3" type="cond" truecount="7" falsecount="1"/>
+        <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="9" count="1" type="cond" truecount="6" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
       </file>
       <file name="checkExistenceConfig.js" path="C:\Users\Computer\Desktop\New folder (3)\functions\configValidating\checkExistenceConfig.js">
         <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>

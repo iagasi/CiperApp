@@ -8,14 +8,13 @@ const MyCliLibraryError = require("./Errors/MyCliError")
 function requiredOptionsHandler(optionShortName, optionLargeName) {
   try {
     const receivedOptions = process.argv.filter((el) => { return el == optionShortName || el == optionLargeName })
-
+console.log(typeof receivedOptions);
 
     if (receivedOptions.length > 1) { throw new MyCliLibraryError("Dublicated argument found=   " + receivedOptions) }
     if (receivedOptions.length == 0) { console.log(" -Not provided  " + optionShortName + "   or  " + optionLargeName); return false; }
 
     const optionPositionInArray = process.argv.indexOf(receivedOptions[0])
 
-    
 
     if (process.argv[optionPositionInArray + 1]) {
       if (process.argv[optionPositionInArray + 1].charAt(0) == "-") { throw new MyCliLibraryError(process.argv[optionPositionInArray] + "   -----   has  unvalid paramters")}
@@ -26,8 +25,8 @@ function requiredOptionsHandler(optionShortName, optionLargeName) {
   }
 
   catch (err) {
-    console.error(err);
-    process.exit(1)
+    console.error(err.message);
+  // process.exit(1)
   }
 
 

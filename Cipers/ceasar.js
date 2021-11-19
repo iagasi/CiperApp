@@ -1,13 +1,13 @@
 const { Transform } = require("stream")
 
-const {LetterChecker}=require("./ceasarEncryptionLogic")
+const LetterChecker=require("./ceasarEncryptionLogic")
 
 
 
 
 
 
-const handler = (action, dataa, shift) => {
+const ceasar = (action, dataa, shift) => {
   const ciper = new LetterChecker()
 
   return new Transform({
@@ -27,6 +27,8 @@ const handler = (action, dataa, shift) => {
         ceasar = ciper.decrypt(data.toString(), shift)
       }
 
+
+      
       cb(null, ceasar)
     }
 
@@ -34,4 +36,4 @@ const handler = (action, dataa, shift) => {
 
 }
 
-module.exports = { LetterChecker, handler }
+module.exports =ceasar
