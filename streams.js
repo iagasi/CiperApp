@@ -29,7 +29,7 @@ const mainStreamHandler = (readpath, writepath, args) => {
         else if (fs.existsSync(writepath)) {
             const writeStream = new CustomWriteStream(writepath)
             outputStream = writeStream
-            //outputStream = fs.createWriteStream(writepath, { flags: "a+" })
+           
         }
 
         else { pathErrorHandler("Wrong Output Path") }

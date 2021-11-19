@@ -1,0 +1,22 @@
+{
+  "name": "new-cli",
+  "version": "1.0.0",
+  "description": "IMPORTANT if you have ussies with  not reading from input file or not writing to output file  Update Node to Currrent version 16.13.because here used Custom Read and Write strems",
+  "main": "MyCliLibrary.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iagasi/CiperApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iagasi/CiperApp/issues"
+  },
+  "homepage": "https://github.com/iagasi/CiperApp#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}

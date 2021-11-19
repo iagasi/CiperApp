@@ -1,8 +1,8 @@
 const { Transform } = require("stream")
-const ceasar=require("./ceasar.js")
+const LetterChecker =require("./ceasarEncryptionLogic")
 
 const rot8Handler=(action,data,shift=8)=>{
-const rot8=new ceasar.LetterChecker()
+const rot8=new LetterChecker()
 
 return new Transform({
 
