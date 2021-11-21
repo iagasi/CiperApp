@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637505347660" clover="3.2.0">
-  <project timestamp="1637505347661" name="All files">
-    <metrics statements="102" coveredstatements="97" conditionals="75" coveredconditionals="66" methods="15" coveredmethods="14" elements="192" coveredelements="177" complexity="0" loc="102" ncloc="102" packages="4" files="9" classes="9"/>
+<coverage generated="1637511987933" clover="3.2.0">
+  <project timestamp="1637511987933" name="All files">
+    <metrics statements="103" coveredstatements="98" conditionals="75" coveredconditionals="66" methods="15" coveredmethods="14" elements="193" coveredelements="178" complexity="0" loc="103" ncloc="103" packages="4" files="9" classes="9"/>
     <package name="New folder (3)">
-      <metrics statements="35" coveredstatements="30" conditionals="20" coveredconditionals="16" methods="4" coveredmethods="3"/>
+      <metrics statements="36" coveredstatements="31" conditionals="20" coveredconditionals="16" methods="4" coveredmethods="3"/>
       <file name="MyCliLibrary.js" path="C:\Users\Computer\Desktop\New folder (3)\MyCliLibrary.js">
-        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="11" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
@@ -19,6 +19,7 @@
         <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="24" count="1" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
       </file>
       <file name="streams.js" path="C:\Users\Computer\Desktop\New folder (3)\streams.js">

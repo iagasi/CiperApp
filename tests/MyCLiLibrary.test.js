@@ -8,12 +8,14 @@ afterEach(() => {
 
 jest.spyOn(console, 'error')
    .mockImplementation((a) => { });
+   const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => {});
+    
 test("Check for config parameter not provided", () => {
    process.argv.push("-c")
    const run = MyCliLibrary.requiredOptionsHandler("-c", "--config")
 
    expect(console.error.mock.calls[0][0]).toBe("for  " + "-c" + "  parameters not provided")
-
+   expect(mockExit).toHaveBeenCalledWith(1);
 })
 test("Check invalid first parameter must be without >>  - <<", () => {
    process.argv.push("-c")
@@ -24,7 +26,7 @@ test("Check invalid first parameter must be without >>  - <<", () => {
    const run = MyCliLibrary.requiredOptionsHandler(config1, "--config")
 
    expect(console.error.mock.calls[0][0]).toBe(config1 + "   -----   has  unvalid paramters")
-
+   expect(mockExit).toHaveBeenCalledWith(1);
 })
 
 test("User passes the same cli argument twice; Result: Error message is shown ", () => {
@@ -38,7 +40,7 @@ test("User passes the same cli argument twice; Result: Error message is shown ",
    const run = MyCliLibrary.requiredOptionsHandler(config1, "--config")
 
    expect(console.error.mock.calls[0][0]).toBe("Dublicated argument found=   " + dublicated)
-
+   expect(mockExit).toHaveBeenCalledWith(1);
 })
 
 test("User passes correct sequence of symbols as argument for --config that matches regular expression", () => {

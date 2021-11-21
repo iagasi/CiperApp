@@ -42,7 +42,7 @@ const mainStreamHandler = (readpath, writepath, args,readStream,writeStream) => 
     }
    
     catch (error) {console.error(error.message);
-        return 
+        return process.exit(1)
          }
     pipeline
         (
