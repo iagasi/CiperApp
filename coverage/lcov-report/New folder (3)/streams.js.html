@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.07% </span>
+                <span class="strong">73.91% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/26</span>
+                <span class='fraction'>17/23</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">76.19% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/24</span>
+                <span class='fraction'>16/21</span>
             </div>
         
             
@@ -150,9 +150,10 @@
 <a name='L91'></a><a href='#L91'>91</a>
 <a name='L92'></a><a href='#L92'>92</a>
 <a name='L93'></a><a href='#L93'>93</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -179,7 +180,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,7 +218,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -242,17 +242,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-const CustomReadStream = require("./CustomStreams/CustomReadStream")
-const CustomWriteStream = require("./CustomStreams/CustomWriteStream")
+//const CustomReadStream = require("./CustomStreams/CustomReadStream")
+//const CustomWriteStream = require("./CustomStreams/CustomWriteStream")
 const PathError = require("./Errors/PathError")
 &nbsp;
-&nbsp;
+// const writeStream = new CustomWriteStream(writepath)
+// const readStream = new CustomReadStream(readpath)
 const fs = require("fs")
 const { pipeline } = require("stream")
 &nbsp;
 &nbsp;
 &nbsp;
-const mainStreamHandler = (readpath, writepath, args) =&gt; {
+const mainStreamHandler = (readpath, writepath, args,readStream,writeStream) =&gt; {
 &nbsp;
     readpath
     writepath
@@ -263,16 +264,16 @@ const mainStreamHandler = (readpath, writepath, args) =&gt; {
         if (!readpath) { inputStream = process.stdin }
         
             else <span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync(readpath)) {
-            const readStream = <span class="cstat-no" title="statement not covered" >new CustomReadStream(readpath)</span>
-<span class="cstat-no" title="statement not covered" >            inputStream = readStream}</span>
+<span class="cstat-no" title="statement not covered" >            readStream (readpath)</span>
+<span class="cstat-no" title="statement not covered" >            inputStream = readStream(readpath)}</span>
             else{throw new PathError("Wrong Input Path")}
            
         //  inputStream.on("error", err =&gt; { throw new PathError("Wrong  Input Path ")})
         
         <span class="missing-if-branch" title="if path not taken" >I</span>if (!writepath) { <span class="cstat-no" title="statement not covered" >outputStream = process.stdout </span>}
         else <span class="missing-if-branch" title="if path not taken" >I</span>if (fs.existsSync(writepath)) {
-            const writeStream = <span class="cstat-no" title="statement not covered" >new CustomWriteStream(writepath)</span>
-<span class="cstat-no" title="statement not covered" >            outputStream = writeStream</span>
+     
+<span class="cstat-no" title="statement not covered" >            outputStream =     writeStream(writepath)</span>
            
         }
 &nbsp;
@@ -332,7 +333,6 @@ module.exports = { mainStreamHandler ,pipeline}
 &nbsp;
 &nbsp;
 &nbsp;
-&nbsp;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -340,7 +340,7 @@ module.exports = { mainStreamHandler ,pipeline}
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Nov 21 2021 14:55:50 GMT+0400 (Georgia Standard Time)
+                at Sun Nov 21 2021 18:35:47 GMT+0400 (Georgia Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

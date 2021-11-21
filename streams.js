@@ -1,15 +1,16 @@
 
-const CustomReadStream = require("./CustomStreams/CustomReadStream")
-const CustomWriteStream = require("./CustomStreams/CustomWriteStream")
+//const CustomReadStream = require("./CustomStreams/CustomReadStream")
+//const CustomWriteStream = require("./CustomStreams/CustomWriteStream")
 const PathError = require("./Errors/PathError")
 
-
+// const writeStream = new CustomWriteStream(writepath)
+// const readStream = new CustomReadStream(readpath)
 const fs = require("fs")
 const { pipeline } = require("stream")
 
 
 
-const mainStreamHandler = (readpath, writepath, args) => {
+const mainStreamHandler = (readpath, writepath, args,readStream,writeStream) => {
 
     readpath
     writepath
@@ -20,16 +21,16 @@ const mainStreamHandler = (readpath, writepath, args) => {
         if (!readpath) { inputStream = process.stdin }
         
             else if (fs.existsSync(readpath)) {
-            const readStream = new CustomReadStream(readpath)
-            inputStream = readStream}
+            readStream (readpath)
+            inputStream = readStream(readpath)}
             else{throw new PathError("Wrong Input Path")}
            
         //  inputStream.on("error", err => { throw new PathError("Wrong  Input Path ")})
         
         if (!writepath) { outputStream = process.stdout }
         else if (fs.existsSync(writepath)) {
-            const writeStream = new CustomWriteStream(writepath)
-            outputStream = writeStream
+     
+            outputStream =     writeStream(writepath)
            
         }
 
@@ -66,7 +67,6 @@ const mainStreamHandler = (readpath, writepath, args) => {
 
 
 module.exports = { mainStreamHandler ,pipeline}
-
 
 
 

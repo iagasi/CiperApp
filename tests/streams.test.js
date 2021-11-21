@@ -1,9 +1,11 @@
 const MainStreamHandler=require("../streams")
 
 
-const{pipeline}=require("../streams")
-jest.mock("../CustomStreams/CustomReadStream")
-   jest.mock("../CustomStreams/CustomWriteStream")
+
+// jest.mock("../CustomStreams/CustomReadStream")
+//    jest.mock("../CustomStreams/CustomWriteStream")
+
+
 afterEach(() => {
     jest.clearAllMocks();
   });
