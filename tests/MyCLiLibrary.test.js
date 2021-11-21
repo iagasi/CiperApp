@@ -27,7 +27,7 @@ test("Check invalid first parameter must be without >>  - <<", () => {
 
 })
 
-test("Check If dublicate Arguments present ", () => {
+test("User passes the same cli argument twice; Result: Error message is shown ", () => {
    const config1 = "-c"
    process.argv.push(config1)
    process.argv.push(config1)
@@ -41,7 +41,7 @@ test("Check If dublicate Arguments present ", () => {
 
 })
 
-test("if it returns Proper value", () => {
+test("User passes correct sequence of symbols as argument for --config that matches regular expression", () => {
    process.argv.push("-c")
    process.argv.push("C1-C0-A-R1")
    const run = MyCliLibrary.requiredOptionsHandler("-c", "--config")

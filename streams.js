@@ -7,9 +7,7 @@ const PathError = require("./Errors/PathError")
 const fs = require("fs")
 const { pipeline } = require("stream")
 
-function pathErrorHandler(str) {
-    throw new PathError(str)
-}
+
 
 const mainStreamHandler = (readpath, writepath, args) => {
 
@@ -20,11 +18,14 @@ const mainStreamHandler = (readpath, writepath, args) => {
 
     try {
         if (!readpath) { inputStream = process.stdin }
-        else {
+        
+            else if (fs.existsSync(readpath)) {
             const readStream = new CustomReadStream(readpath)
-            inputStream = readStream
-            inputStream.on("error", err => pathErrorHandler("Wrong  Input Path "))
-        }
+            inputStream = readStream}
+            else{throw new PathError("Wrong Input Path")}
+           
+        //  inputStream.on("error", err => { throw new PathError("Wrong  Input Path ")})
+        
         if (!writepath) { outputStream = process.stdout }
         else if (fs.existsSync(writepath)) {
             const writeStream = new CustomWriteStream(writepath)
@@ -32,17 +33,22 @@ const mainStreamHandler = (readpath, writepath, args) => {
            
         }
 
-        else { pathErrorHandler("Wrong Output Path") }
+        else { 
+         throw new PathError("Wrong Output Path") 
+         
+            }
 
     }
    
-    catch (error) { process.stderr.write(error.message); process.exit(1) }
+    catch (error) {console.error(error.message);
+        return 
+         }
     pipeline
         (
             inputStream,
             ...args,
             outputStream,
-            (err) => { console.log(err) }
+            (err) => { console.log("err from pipeline",err) }
 
         )
 
@@ -59,7 +65,7 @@ const mainStreamHandler = (readpath, writepath, args) => {
 
 
 
-module.exports = { mainStreamHandler }
+module.exports = { mainStreamHandler ,pipeline}
 
 
 
