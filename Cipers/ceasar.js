@@ -7,7 +7,7 @@ const LetterChecker=require("./ceasarEncryptionLogic")
 
 
 
-const ceasar = (action, dataa, shift) => {
+const ceasar = (action, data, shift) => {
   const ciper = new LetterChecker()
 
   return new Transform({

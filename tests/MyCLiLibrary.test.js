@@ -48,7 +48,7 @@ test("User passes correct sequence of symbols as argument for --config that matc
    process.argv.push("C1-C0-A-R1")
    const run = MyCliLibrary.requiredOptionsHandler("-c", "--config")
 
-   console.log(process.argv);
+   
 
 
    expect(run).toBe("C1-C0-A-R1")

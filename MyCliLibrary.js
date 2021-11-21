@@ -8,7 +8,7 @@ const MyCliLibraryError = require("./Errors/MyCliError")
 function requiredOptionsHandler(optionShortName, optionLargeName) {
   try {
     const receivedOptions = process.argv.filter((el) => { return el == optionShortName || el == optionLargeName })
-console.log(typeof receivedOptions);
+
 
     if (receivedOptions.length > 1) { throw new MyCliLibraryError("Dublicated argument found=   " + receivedOptions) }
     if (receivedOptions.length == 0) { console.log(" -Not provided  " + optionShortName + "   or  " + optionLargeName); return false; }
